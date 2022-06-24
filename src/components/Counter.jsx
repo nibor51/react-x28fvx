@@ -1,4 +1,4 @@
-export default function Counter({count}) {
-  return;
-  <div>{count}</div>;
+import React from 'react';
+export default function Counter({ round }) {
+  return round >= 1 ? <p>Vous en êtes à votre {round} tentative</p> : '';
 }
