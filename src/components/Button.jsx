@@ -1,6 +1,4 @@
-export default function Button() {
+export default function Button({setCount}) {
   return;
-  <button>
-    
-  </button>;
+<button onClick={setCount} >Soumettre</button>
 }
