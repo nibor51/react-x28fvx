@@ -18,7 +18,19 @@ export default function Congrats({
         number={number}
         isSame={isSame}
       />
-      <Counter round={round} />
+      
+      <p></p>
+      {round >= 1 ? (
+        <p>
+          You are on {round}
+          <sup>
+            {round == 1 ? 'st' : round == 2 ? 'nd' : round == 3 ? 'rd' : 'th'}
+          </sup>{' '}
+          tentative.
+        </p>
+      ) : (
+        ''
+      )}
     </>
   );
 }

@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Congrats({ number, round }) {
   return (
-    <div>
+    <p>
       Congratulations, you've found {number} in {round} turn
-      {round === 1 ? '' : 's'}
-    </div>
+      {round === 1 ? '' : 's'}.
+    </p>
   );
 }
