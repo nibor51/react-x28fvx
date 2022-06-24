@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from './components/Button';
+import Start from './components/Start';
 import Counter from './components/Counter';
+import Form from './components/Form';
 import { randomRange } from './utils/random';
 import './style.css';
 
@@ -8,19 +9,29 @@ const number = randomRange(1, 100);
 console.log(number);
 export default function App() {
   const [round, setRound] = React.useState(-1);
-  const [userNumber, setUserNumber] = React.useState();
-  return (
+  const [isSame, setIsSame] = React.useState(false);
+  console.log(isSame);
+
+  return isSame ? (
+    <div>
+      Congratulations, you've found {number} in {round} turn
+      {round === 1 ? '' : 's'}
+    </div>
+  ) : round === -1 ? (
     <>
-      {round === -1 ? (
-        <div>Welcome ! For play a guess number ! Click on Start button !</div>
-      ) : (
-        <>
-          <label htmlFor="userNumber">Type your number !</label>
-          <input id="userNumber" type="number"></input>
-          <Counter round={round} />
-        </>
-      )}
-      <Button setRound={setRound} round={round} />
+      <div>Welcome ! For play a guess number ! Click on Start button !</div>
+      <Start setRound={setRound} round={round} />
+    </>
+  ) : (
+    <>
+      <Form
+        setRound={setRound}
+        round={round}
+        setIsSame={setIsSame}
+        number={number}
+        isSame={isSame}
+      />
+      <Counter round={round} />
     </>
   );
 }
