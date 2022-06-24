@@ -1,21 +1,14 @@
 import React from 'react';
+import { play } from '../utils/play';
 
 export default function Button({ setRound, setIsSame, number, isSame }) {
   const [userNumber, setUserNumber] = React.useState('');
   const [error, setError] = React.useState('');
-  function play(e) {
-    e.preventDefault();
-    if (Number.isInteger(userNumber) && userNumber > 0 && userNumber <= 100) {
-      setRound((round) => round + 1);
-      setIsSame(userNumber == number);
-    } else {
-      setError('Votre proposition doit être un nombre entre 1 et 100 !');
-    }
-    setUserNumber('');
-  }
+
   const userNumberChange = (e) => {
     setUserNumber(parseInt(e.target.value, 10));
   };
+
   return (
     <>
       <form onSubmit={play}>
