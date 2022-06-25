@@ -10,7 +10,6 @@ export default function App() {
   const [round, setRound] = React.useState(-1);
   const [isSame, setIsSame] = React.useState(false);
   const [number, setNumber] = React.useState(randomRange(1, 100));
-  console.log(number);
 
   return (
     <>
