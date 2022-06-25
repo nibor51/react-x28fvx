@@ -1,10 +1,11 @@
 import React from 'react';
+import Start from '../components/Start';
 
-export default function Congrats({ number, round }) {
+export default function Congrats({ setRound, round, setNumber }) {
   return (
-    <p>
-      Congratulations, you've found {number} in {round} turn
-      {round === 1 ? '' : 's'}.
-    </p>
+    <>
+      <p>For play ...</p>
+      <Start setRound={setRound} />
+    </>
   );
 }
