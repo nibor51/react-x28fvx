@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Button({ setRound, setIsSame, isSame, number }) {
+export default function Button({ setRound, setIsSame, number }) {
   const [userNumber, setUserNumber] = React.useState('');
   const [error, setError] = React.useState('');
   const [hint, setHint] = React.useState('');
