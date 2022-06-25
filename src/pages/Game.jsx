@@ -2,13 +2,7 @@ import React from 'react';
 import Counter from '../components/Counter';
 import Form from '../components/Form';
 
-export default function Congrats({
-  number,
-  round,
-  setRound,
-  isSame,
-  setIsSame,
-}) {
+export default function Game({ number, round, setRound, isSame, setIsSame }) {
   return (
     <>
       <Form
@@ -18,7 +12,7 @@ export default function Congrats({
         number={number}
         isSame={isSame}
       />
-      
+
       <p></p>
       {round >= 1 ? (
         <p>
