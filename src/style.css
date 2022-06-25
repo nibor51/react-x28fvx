@@ -3,6 +3,10 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
 }
+body {
+  background-color: #fefee7;
+  color: #32322d;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -16,6 +20,8 @@ input {
 
 button {
   margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #e3e6e8;
 }
 span {
   color: red;
