@@ -28,7 +28,7 @@ export default function Button({ setRound, setIsSame, number }) {
 
   return (
     <>
-      <p>{hint}</p>
+      <strong>{hint}</strong>
       <form onSubmit={play}>
         <label htmlFor="userNumber">Type your number !</label>
         <input
